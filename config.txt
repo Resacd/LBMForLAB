@@ -1,0 +1,51 @@
+parameters:
+
+  stl_file: "JT2011.stl"
+  time_resolution: 1e-5
+  density: 1060
+  kinematic_viscosity: 3.5e-6
+  relaxation_factor: 0.68
+  grid_size: 0.025
+  pressure: 1
+  inlet_velocity: 0.1
+  reynolds_number: 100
+  number_of_outlets: 10
+  IterToWrite: 1000
+
+  period: 0.9
+
+
+
+inlets:
+
+    plane: z
+    coordinate: -172.611
+    normal: [0, 0, -1]
+
+outlets:
+
+    plane: x
+    coordinate: 14.9714
+    normal: [1, 0, 0]   # Normal vector for outlet 1
+
+    plane: x
+    coordinate: 1.0714
+    normal: [-1, 0, 0]   # Normal vector for outlet 2
+
+    plane: y
+    coordinate: -188.446
+    range_x: [1.5, 3.1]
+    range_z: [-161.5, -160]
+    normal: [0, 1, 0]   # Normal vector for outlet 3
+
+    plane: y
+    coordinate: -190.396
+    range_x: [6.8, 8]
+    range_z: [-157, -155]
+    normal: [0, 1, 0]   # Normal vector for outlet 4
+
+    
+equations: 
+    InletVel1: [-8.579e+08, 4.059e+08, -7.817e+07, 7.994e+06, -4.835e+05, 1.782e+04, -321.6, 3.215, 0.1423] 
+    InletVel2: [-4.32e+06, 7.94e+06, -6.298e+06, 2.82e+06, -7.809e+05, 1.37e+05, -1.484e+04, 901.9, -22.87]
+    InletVel3: [-5.123, 14.15, -14.21, 5.865, -0.5696]
